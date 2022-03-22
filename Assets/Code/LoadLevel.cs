@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class LoadLevel : MonoBehaviour
 {
-    public string levelToLoad = "Level1";
+    public string levelToLoad;
     
     private void OnCollisionEnter(Collision other){
         if(PublicVars.keyNum > 0 && other.gameObject.CompareTag("Player")){

@@ -371,6 +371,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2768e0248af855f4290c0c29176c36ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spawnPoint: {fileID: 0}
+  gun: {fileID: 0}
+  bulletPrefab: {fileID: 0}
 --- !u!195 &431613318
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -531,7 +534,7 @@ PrefabInstance:
     - target: {fileID: 396270682530988762, guid: 6d63f26103ebc2746962a0f2ada88735, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 7c3c4ce426a674b4f89cce27eb4599a5, type: 2}
+      objectReference: {fileID: 2100000, guid: 3206f67d77bf35d47a11e6c992941652, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6d63f26103ebc2746962a0f2ada88735, type: 3}
 --- !u!1 &903839122
