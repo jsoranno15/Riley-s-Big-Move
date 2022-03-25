@@ -7,7 +7,7 @@ public class LoadLevel : MonoBehaviour
 {
     public string levelToLoad;
     
-    private void OnCollisionEnter(Collision other){
+    private void OnCollisionEnter(Collision other) {
         if(PublicVars.keyNum > 0 && other.gameObject.CompareTag("Player")){
             PublicVars.keyNum--;
             SceneManager.LoadScene(levelToLoad);
