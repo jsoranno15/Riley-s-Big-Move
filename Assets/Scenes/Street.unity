@@ -715,10 +715,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Yellow_Door
       objectReference: {fileID: 0}
-    - target: {fileID: 396270682530988761, guid: 6d63f26103ebc2746962a0f2ada88735, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6d63f26103ebc2746962a0f2ada88735, type: 3}
 --- !u!1001 &2754759758275695889
