@@ -5,18 +5,18 @@ using UnityEngine.AI;
 
 public class BotCode : MonoBehaviour
 {
+    // Player Tracking
     NavMeshAgent _navAgent;
     GameObject player;
-    // Start is called before the first frame update
-    void Start()
-    {
-        _navAgent = GetComponent<UnityEngine.AI.NavMeshAgent>();
+
+    void Start() {
+        _navAgent = GetComponent<NavMeshAgent>();
         player = GameObject.FindGameObjectWithTag("Player");
         StartCoroutine(FindPlayer());
     }
 
-    IEnumerator FindPlayer(){
-        while(true){
+    IEnumerator FindPlayer() {
+        while(true) {
             yield return new WaitForSeconds(1.5f);
             _navAgent.destination = player.transform.position;
         }

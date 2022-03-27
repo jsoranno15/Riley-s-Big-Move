@@ -5,34 +5,39 @@ using UnityEngine.AI;
 
 public class PlayerCode : MonoBehaviour
 {
+    // Movement
+    NavMeshAgent _navAgent;
+    Camera mainCam;
+
     int bulletForce = 500;
     public Transform spawnPoint;
     public Transform gun;
-    NavMeshAgent _navAgent;
-    Camera mainCam;
     public GameObject bulletPrefab;
-    // Start is called before the first frame update
-    void Start()
-    {
-        _navAgent = GetComponent<UnityEngine.AI.NavMeshAgent>();
+
+    void Start() {
+        _navAgent = GetComponent<NavMeshAgent>();
         mainCam = Camera.main;
     }
 
-    private void Update(){
-        if(Input.GetMouseButtonDown(0)){
+    private void Update() {
+
+        // Shooting
+        if(Input.GetMouseButtonDown(0)) {
             lookMouse();
             GameObject newBullet = Instantiate(bulletPrefab, spawnPoint.position, transform.rotation);
             newBullet.GetComponent<Rigidbody>().AddForce(gun.forward * bulletForce);
         }
 
-        if(Input.GetMouseButtonDown(1)){
+        // Movement
+        if(Input.GetMouseButtonDown(1)) {
             RaycastHit hit;
-            if(Physics.Raycast(mainCam.ScreenPointToRay(Input.mousePosition) ,out hit, 200 )){
+            if(Physics.Raycast(mainCam.ScreenPointToRay(Input.mousePosition), out hit, 200)) {
                 _navAgent.destination = hit.point;
             }
         }
     }
-    public void FixedUpdate(){
+
+    public void FixedUpdate() {
         lookMouse();
     }
 

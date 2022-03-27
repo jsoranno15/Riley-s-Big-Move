@@ -5,10 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class LoadLevel : MonoBehaviour
 {
-    public string levelToLoad;
+    public string levelToLoad = "Street";
     
-    private void OnCollisionEnter(Collision other){
-        if(PublicVars.keyNum > 0 && other.gameObject.CompareTag("Player")){
+    private void OnCollisionEnter(Collision other) {
+        if(PublicVars.keyNum > 0 && other.gameObject.CompareTag("Player")) {
             PublicVars.keyNum--;
             SceneManager.LoadScene(levelToLoad);
         }
