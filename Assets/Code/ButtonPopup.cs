@@ -18,7 +18,7 @@ public class ButtonPopup : MonoBehaviour
     {
         if (firstClick)
         {
-            thisNote = PublicVars.currentNote;
+            //thisNote = PublicVars.currentNote;
             firstClick = false;
         }
         
@@ -28,7 +28,7 @@ public class ButtonPopup : MonoBehaviour
             {
                 bool isActive = Notes[0].activeSelf;
                 Notes[0].SetActive(!isActive);
-                PublicVars.noteChecked = true;
+                //PublicVars.noteChecked = true;
             }
         }
         else if (thisNote == "Flashlight")
@@ -37,7 +37,7 @@ public class ButtonPopup : MonoBehaviour
             {
                 bool isActive = Notes[1].activeSelf;
                 Notes[1].SetActive(!isActive);
-                PublicVars.noteChecked = true;
+                //PublicVars.noteChecked = true;
             }
         }   
     }

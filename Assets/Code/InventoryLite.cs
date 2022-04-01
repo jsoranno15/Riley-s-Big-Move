@@ -37,7 +37,7 @@ public class InventoryLite : MonoBehaviour
 
             if (inventorySlots[i].transform.GetChild(0).GetComponent<Text>().text == "Key" && inventorySlots[i].transform.GetChild(1).GetComponent<Text>().text == "4")
             {
-                this.GetComponent<SimpleQuestExample>().objective.text = "You have obtained all the keys! Quest Complete!";
+                //this.GetComponent<SimpleQuestExample>().objective.text = "You have obtained all the keys! Quest Complete!";
             }
         }
 
