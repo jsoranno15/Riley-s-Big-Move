@@ -9,6 +9,7 @@ public class PlayerCode : MonoBehaviour
     NavMeshAgent _navAgent;
     Camera mainCam;
 
+    // Shooting
     int bulletForce = 500;
     public Transform spawnPoint;
     public Transform gun;
