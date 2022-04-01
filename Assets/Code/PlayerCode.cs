@@ -15,9 +15,23 @@ public class PlayerCode : MonoBehaviour
     public Transform gun;
     public GameObject bulletPrefab;
 
+    public Vector3 startPos;
+
+    private GameObject portal;
+
     void Start() {
+        portal = GameObject.FindGameObjectWithTag("Portal");
+        if (portal != null) 
+        { 
+            portal.SetActive(false);
+            Debug.Log("Portal Found and Locked!");
+        }
+        
         _navAgent = GetComponent<NavMeshAgent>();
         mainCam = Camera.main;
+        startPos = transform.position;
+
+        PublicVars.enemyNum = GameObject.FindGameObjectsWithTag("Enemy").Length;
     }
 
     private void Update() {
@@ -36,6 +50,8 @@ public class PlayerCode : MonoBehaviour
                 _navAgent.destination = hit.point;
             }
         }
+
+        if (PublicVars.enemyNum == PublicVars.enemyDestroyed && portal != null) { portal.SetActive(true); }
     }
 
     public void FixedUpdate() {
