@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Timer : MonoBehaviour
 {
-    float timeLimit = 60.0f;\
+    float timeLimit = 60.0f;
     
     bool stopTimer = false;
 
@@ -14,7 +14,7 @@ public class Timer : MonoBehaviour
     }
 
     void Update() {
-        if !(stopTimer) {
+        if (!stopTimer) {
             if (timeLimit > 0) {
                 timeLimit -= Time.deltaTime;
             }
@@ -27,6 +27,6 @@ public class Timer : MonoBehaviour
     }
 
     void TimerUICalc (float timeVal) {
-        int minutes
+        int minute = (int)(timeLimit/60.0f);
     }
 }

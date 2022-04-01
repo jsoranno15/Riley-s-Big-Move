@@ -15,8 +15,13 @@ TagManager:
   - Water
   - UI
   - Player
+<<<<<<< HEAD
   - Enemy
   - 
+=======
+  - Bot
+  - Drone
+>>>>>>> fa6c7e0dde70f2fd118d36134965ac29c3f06359
   - 
   - 
   - 
