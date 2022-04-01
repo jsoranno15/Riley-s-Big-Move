@@ -38,7 +38,7 @@ public class PlayerCode : MonoBehaviour
 
         // Shooting
         if(Input.GetMouseButtonDown(0)) {
-            lookMouse();
+            //lookMouse();
             GameObject newBullet = Instantiate(bulletPrefab, spawnPoint.position, transform.rotation);
             newBullet.GetComponent<Rigidbody>().AddForce(gun.forward * bulletForce);
         }
@@ -54,18 +54,18 @@ public class PlayerCode : MonoBehaviour
         if (PublicVars.enemyNum == PublicVars.enemyDestroyed && portal != null) { portal.SetActive(true); }
     }
 
-    public void FixedUpdate() {
-        lookMouse();
-    }
+    // public void FixedUpdate() {
+    //     lookMouse();
+    // }
 
-    void lookMouse(){
-        RaycastHit hit;
-            if(Physics.Raycast(mainCam.ScreenPointToRay(Input.mousePosition) ,out hit, 200 )){
-                Vector3 target = hit.point;
-                target.y = spawnPoint.position.y;
-                gun.LookAt(target);
-            }
-    }
+    // void lookMouse(){
+    //     RaycastHit hit;
+    //         if(Physics.Raycast(mainCam.ScreenPointToRay(Input.mousePosition) ,out hit, 200 )){
+    //             Vector3 target = hit.point;
+    //             target.y = spawnPoint.position.y;
+    //             gun.LookAt(target);
+    //         }
+    // }
 
     // Key Collecting
     private void OnTriggerEnter(Collider other){

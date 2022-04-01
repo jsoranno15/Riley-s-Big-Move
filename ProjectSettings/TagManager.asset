@@ -4,24 +4,19 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Key
   - Bullet
+  - Portal
   - Enemy
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - Bullet
+  - 
   - Water
   - UI
-  - Player
-<<<<<<< HEAD
-  - Enemy
   - 
-=======
-  - Bot
-  - Drone
->>>>>>> fa6c7e0dde70f2fd118d36134965ac29c3f06359
+  - 
+  - 
   - 
   - 
   - 

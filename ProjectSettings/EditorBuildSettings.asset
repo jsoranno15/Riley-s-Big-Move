@@ -4,42 +4,5 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes:
-  - enabled: 1
-    path: Assets/_Scenes/StartMenu.unity
-    guid: 9de6203c73dcbd84aa2ad31d6b6191e7
-  - enabled: 1
-<<<<<<< HEAD
-    path: Assets/Scenes/LevelSelect.unity
-    guid: 4e06383c1f0ed3447b5bf22003f549bd
-  - enabled: 1
-    path: Assets/Scenes/Instructions.unity
-    guid: 10066f46eddc9f946bff8d749f8db8aa
-  - enabled: 1
-    path: Assets/Scenes/AngerScene.unity
-    guid: 98158cc47e2f6864a9860e71953503d1
-  - enabled: 1
-    path: Assets/Scenes/SadHouse.unity
-    guid: fe0a2f4fb6a38e84f87dde253fae1d42
-  - enabled: 0
-    path: Assets/Scenes/Street.unity
-    guid: 9fc0d4010bbf28b4594072e72b8655ab
-  - enabled: 0
-    path: Assets/Scenes/YellowHouse.unity
-    guid: 9ed9bb9ddd10bfa4e81f5aa316c491c9
-  - enabled: 0
-    path: Assets/Scenes/PinkHouse.unity
-=======
-    path: Assets/_Scenes/Instructions.unity
-    guid: 10066f46eddc9f946bff8d749f8db8aa
-  - enabled: 1
-    path: Assets/_Scenes/Street.unity
-    guid: 9fc0d4010bbf28b4594072e72b8655ab
-  - enabled: 1
-    path: Assets/_Scenes/YellowHouse.unity
-    guid: 9ed9bb9ddd10bfa4e81f5aa316c491c9
-  - enabled: 1
-    path: Assets/_Scenes/PinkHouse.unity
->>>>>>> fa6c7e0dde70f2fd118d36134965ac29c3f06359
-    guid: f3f2b869db830c94294a2286bd30c1fc
+  m_Scenes: []
   m_configObjects: {}

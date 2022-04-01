@@ -4715,6 +4715,7 @@ MonoBehaviour:
   spawnPoint: {fileID: 0}
   gun: {fileID: 0}
   bulletPrefab: {fileID: 7086146927600120657, guid: 3300f0959a345bc40b9e06f87769d76d, type: 3}
+  startPos: {x: 0, y: 0, z: 0}
 --- !u!1 &2754759758324538244
 GameObject:
   m_ObjectHideFlags: 0
