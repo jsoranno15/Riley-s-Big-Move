@@ -5,7 +5,7 @@ using UnityEngine;
 public class Timer : MonoBehaviour
 {
     float timeLimit = 60.0f;
-    
+    bool timeEnd;
     bool stopTimer = false;
 
     void Start()

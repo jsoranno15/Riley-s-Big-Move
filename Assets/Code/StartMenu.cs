@@ -7,7 +7,7 @@ public class StartMenu : MonoBehaviour
 {
     // Start Game Button
     public void StartGame() {
-        SceneManager.LoadScene("LevelSelect");
+        SceneManager.LoadScene("Street");
     }
 
     // Instructions Button

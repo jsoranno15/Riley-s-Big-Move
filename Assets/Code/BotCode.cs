@@ -23,10 +23,8 @@ public class BotCode : MonoBehaviour
     }
 
     private void OnCollisionEnter(Collision other){
-        // Enemy Death
         if(other.gameObject.CompareTag("Bullet")){
             Destroy(other.gameObject);
-            EnemySpawn.enemyCount--;
             Destroy(gameObject);
         }
     }

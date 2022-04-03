@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BulletLife : MonoBehaviour
 {
-    public float lifeSpan = 1.5f;
+    public int lifeSpan = 2;
 
     // Start is called before the first frame update
     void Start()
