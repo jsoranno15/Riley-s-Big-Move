@@ -7,6 +7,9 @@ TagManager:
   - Bullet
   - Portal
   - Enemy
+  - Key
+  - Clipboard
+  - Necklace
   layers:
   - Default
   - TransparentFX
