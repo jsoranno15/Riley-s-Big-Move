@@ -23,4 +23,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SadHouse.unity
     guid: fe0a2f4fb6a38e84f87dde253fae1d42
+  - enabled: 1
+    path: Assets/Scenes/JoyScene.unity
+    guid: c50d7e3c20db7194ab1f48a93d6cb327
   m_configObjects: {}
