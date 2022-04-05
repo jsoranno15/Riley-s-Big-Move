@@ -8,30 +8,18 @@ public class AngerPlayerCode : MonoBehaviour
     // Movement
     NavMeshAgent _navAgent;
     Camera mainCam;
+    float speed = 5.0f;
 
-    public int bulletForce = 500;
+    // Shooting
     public Transform spawnPoint;
     public Transform gun;
     public GameObject bulletPrefab;
+    int bulletForce = 500;
 
-    public Vector3 startPos;
-
-    private GameObject portal;
-
-    void Start() {
-        portal = GameObject.FindGameObjectWithTag("Portal");
-        if (portal != null) 
-        { 
-            portal.SetActive(false);
-            Debug.Log("Portal Found and Locked!");
-        }
-        
+    void Start() { 
         _navAgent = GetComponent<NavMeshAgent>();
+        _navAgent.speed = speed;
         mainCam = Camera.main;
-        startPos = transform.position;
-
-        PublicVars.enemyNum = GameObject.FindGameObjectsWithTag("Enemy").Length;
-        Debug.Log("Number of enemies is equal to " + PublicVars.enemyNum);
     }
 
     private void Update() {
@@ -49,9 +37,8 @@ public class AngerPlayerCode : MonoBehaviour
             if(Physics.Raycast(mainCam.ScreenPointToRay(Input.mousePosition), out hit, 200)) {
                 _navAgent.destination = hit.point;
             }
+            print(_navAgent.speed);
         }
-
-        if (PublicVars.enemyNum == PublicVars.enemyDestroyed && portal != null) { portal.SetActive(true); }
     }
 
     public void FixedUpdate() {
