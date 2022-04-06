@@ -15,20 +15,39 @@ public class AngerPlayerCode : MonoBehaviour
     public Transform gun;
     public GameObject bulletPrefab;
     int bulletForce = 500;
+    float fireCD = 0.75f;
+    bool cooldown = false;
+    AudioSource _audioSource;
+    public AudioClip fire;
+    public AudioClip bullet;
 
     void Start() { 
         _navAgent = GetComponent<NavMeshAgent>();
         _navAgent.speed = speed;
         mainCam = Camera.main;
+        _audioSource = GetComponent<AudioSource>();
     }
 
     private void Update() {
 
         // Shooting
-        if(Input.GetMouseButtonDown(0)) {
+        if(cooldown) {
+            if(fireCD > 0) {
+                fireCD -= Time.deltaTime;
+            }
+            else {
+                fireCD = 1.0f;
+                cooldown = false;
+            }
+        }
+
+        if(Input.GetMouseButtonDown(0) && cooldown != true) {
             lookMouse();
+            _audioSource.PlayOneShot(fire);
             GameObject newBullet = Instantiate(bulletPrefab, spawnPoint.position, transform.rotation);
             newBullet.GetComponent<Rigidbody>().AddForce(gun.forward * bulletForce);
+            cooldown = true;
+            _audioSource.PlayOneShot(bullet);
         }
 
         // Movement
