@@ -40,7 +40,7 @@ public class ItemHandler : MonoBehaviour
     {
         FoundText.text = obj.GetComponent<JoyItem>().Description;
         FoundText.gameObject.SetActive(true);
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(5f);
         FoundText.gameObject.SetActive(false);
     }
     public void ExitApp()
