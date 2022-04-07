@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.SceneManagement;
+using TMPro;
 
 public class AngerPlayerCode : MonoBehaviour
 {
@@ -15,11 +17,19 @@ public class AngerPlayerCode : MonoBehaviour
     public Transform gun;
     public GameObject bulletPrefab;
     int bulletForce = 500;
-    float fireCD = 0.75f;
+    float fireCD = 0.25f;
     bool cooldown = false;
     AudioSource _audioSource;
     public AudioClip fire;
     public AudioClip bullet;
+
+    // Key
+    public AudioClip keyPickUp;
+
+    // Death
+    public TextMeshProUGUI textUI;
+    bool isAlive = true;
+    public AudioClip death;
 
     void Start() { 
         _navAgent = GetComponent<NavMeshAgent>();
@@ -36,12 +46,12 @@ public class AngerPlayerCode : MonoBehaviour
                 fireCD -= Time.deltaTime;
             }
             else {
-                fireCD = 1.0f;
+                fireCD = 0.25f;
                 cooldown = false;
             }
         }
 
-        if(Input.GetMouseButtonDown(0) && cooldown != true) {
+        if(Input.GetMouseButtonDown(0) && cooldown != true && isAlive) {
             lookMouse();
             _audioSource.PlayOneShot(fire);
             GameObject newBullet = Instantiate(bulletPrefab, spawnPoint.position, transform.rotation);
@@ -51,12 +61,11 @@ public class AngerPlayerCode : MonoBehaviour
         }
 
         // Movement
-        if(Input.GetMouseButtonDown(1)) {
+        if(Input.GetMouseButtonDown(1) && isAlive) {
             RaycastHit hit;
             if(Physics.Raycast(mainCam.ScreenPointToRay(Input.mousePosition), out hit, 200)) {
                 _navAgent.destination = hit.point;
             }
-            print(_navAgent.speed);
         }
     }
 
@@ -74,9 +83,37 @@ public class AngerPlayerCode : MonoBehaviour
     }
 
     private void OnTriggerEnter(Collider other){
+        
+        // Pick Up Key
         if(other.CompareTag("Key")){
-            PublicVars.keyNum++;
+            AngerPublicVars.hasKey = true;
+            _audioSource.PlayOneShot(keyPickUp);
             Destroy(other.gameObject);
         }
+
+        // Death
+        if(other.CompareTag("Enemy") && isAlive){
+            die();
+        }
+    }
+
+    void die() {
+        _navAgent.destination = transform.position;
+        _audioSource.PlayOneShot(death);
+        isAlive = false;
+        AngerPublicVars.gameRun = false;
+        textUI.text = "";
+        StopAllCoroutines();
+        string message = "Riley was consumed by her anger!";
+        StartCoroutine(printText(message));
+    }
+
+    IEnumerator printText (string text) {
+        foreach (char c in text) {
+            textUI.text += c;
+            yield return new WaitForSeconds(0.06f);
+        }
+        yield return new WaitForSeconds(2.0f);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }

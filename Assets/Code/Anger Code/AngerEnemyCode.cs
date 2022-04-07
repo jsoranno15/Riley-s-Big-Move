@@ -10,6 +10,9 @@ public class AngerEnemyCode : MonoBehaviour
     NavMeshAgent _navAgent;
     GameObject player;
 
+    public AudioSource _audioSource;
+    public AudioClip death;
+
     void Start() {
         _navAgent = GetComponent<NavMeshAgent>();
         player = GameObject.FindGameObjectWithTag("Player");
@@ -26,9 +29,15 @@ public class AngerEnemyCode : MonoBehaviour
     private void OnCollisionEnter(Collision other){
         // Enemy Death
         if(other.gameObject.CompareTag("Bullet")){
+            StartCoroutine(deathSound());
             Destroy(other.gameObject);
             AngerEnemySpawn.enemyCount--;
             Destroy(gameObject);
         }
+    }
+
+    IEnumerator deathSound() {
+        _audioSource.Play();
+        yield return new WaitForSeconds(.01f);
     }
 }
