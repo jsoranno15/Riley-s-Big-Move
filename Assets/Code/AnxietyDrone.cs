@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.AI;
+using TMPro;
 
 public class AnxietyDrone : MonoBehaviour
 {
@@ -16,12 +17,17 @@ public class AnxietyDrone : MonoBehaviour
     private float spotCounter = 0;
     private bool playerIn = false;
 
+    public TextMeshProUGUI tracker;
+
     void Start()
     {
         guardAudio = GetComponent<AudioSource>();
         enemyTransform = transform;
         animator = GetComponent<Animator>();
         animator.Play("Patrol");
+
+        //tracker = GameObject.FindGameObjectWithTag("tracker").GetComponent<Text>();
+        tracker.text = PublicVars.enemyDestroyed.ToString() + " / " + PublicVars.enemyNum.ToString();
     }
 
     void OnTriggerEnter(Collider other)
@@ -74,6 +80,8 @@ public class AnxietyDrone : MonoBehaviour
         else if (collision.transform.CompareTag("Bullet"))
         {
             PublicVars.enemyDestroyed += 1;
+            tracker.text = PublicVars.enemyDestroyed.ToString() + " / " + PublicVars.enemyNum;
+
             animator.Play("Shutdown");
             StartCoroutine(selfDestruct());
         }
@@ -94,13 +102,14 @@ public class AnxietyDrone : MonoBehaviour
 
     IEnumerator selfDestruct()
     {
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(1);
         Destroy(gameObject);
     }
 
     IEnumerator eliminateTarget()
     {
         yield return new WaitForSeconds(2);
+        PublicVars.enemyDestroyed = 0;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }

@@ -21,6 +21,8 @@ public class AngerEnemySpawn : MonoBehaviour
     float timeCounter = 0.0f;
 
     private void Start() {
+        enemyCount = 0;
+        timeCounter = 0.0f;
         spawnPoint = spawn_1;
     }
 

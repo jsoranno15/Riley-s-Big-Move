@@ -14,6 +14,7 @@ public class AngerEnemyCode : MonoBehaviour
     public AudioClip death;
 
     void Start() {
+        _audioSource = GetComponent<AudioSource>();
         _navAgent = GetComponent<NavMeshAgent>();
         player = GameObject.FindGameObjectWithTag("Player");
         StartCoroutine(FindPlayer());

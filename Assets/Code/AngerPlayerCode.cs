@@ -114,6 +114,6 @@ public class AngerPlayerCode : MonoBehaviour
             yield return new WaitForSeconds(0.06f);
         }
         yield return new WaitForSeconds(2.0f);
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        SceneManager.LoadScene("AngerScene");
     }
 }
