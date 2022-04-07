@@ -11,12 +11,13 @@ public class AngerEnemySpawn : MonoBehaviour
     public GameObject spawn_3;
     public GameObject spawn_4;
     public GameObject spawn_5;
+    public GameObject spawn_6;
     
     GameObject spawnPoint;
 
     public static int enemyCount = 0;
     
-    float spawnInterval = 1.0f;
+    float spawnInterval = 0.8f;
     float timeCounter = 0.0f;
 
     private void Start() {
@@ -35,13 +36,14 @@ public class AngerEnemySpawn : MonoBehaviour
     }
 
     GameObject selectSpawn () {
-        int spawn_num = Random.Range(1,5);
+        int spawn_num = (Random.Range(1,100)) % 6;
         switch (spawn_num) {
-            case 1: return spawn_1;
-            case 2: return spawn_2;
-            case 3: return spawn_3;
-            case 4: return spawn_4;
-            case 5: return spawn_5;
+            case 0: return spawn_1;
+            case 1: return spawn_2;
+            case 2: return spawn_3;
+            case 3: return spawn_4;
+            case 4: return spawn_5;
+            case 5: return spawn_6;
             default: return spawn_1;
         }
     }

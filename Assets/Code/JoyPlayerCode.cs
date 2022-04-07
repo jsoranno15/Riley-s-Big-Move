@@ -9,9 +9,9 @@ public class JoyPlayerCode : MonoBehaviour
     NavMeshAgent _navAgent;
     Camera mainCam;
 
-    public int bulletForce = 500;
-    public Transform spawnPoint;
-    public Transform gun;
+    // public int bulletForce = 500;
+    // public Transform spawnPoint;
+    // public Transform gun;
     public GameObject bulletPrefab;
 
     public Vector3 startPos;
@@ -36,11 +36,11 @@ public class JoyPlayerCode : MonoBehaviour
     private void Update() {
 
         // Shooting
-        if(Input.GetMouseButtonDown(0)&&this.tag=="Player") {
-            lookMouse();
-            GameObject newBullet = Instantiate(bulletPrefab, spawnPoint.position, transform.rotation);
-            newBullet.GetComponent<Rigidbody>().AddForce(gun.forward * bulletForce);
-        }
+        // if(Input.GetMouseButtonDown(0)&&this.tag=="Player") {
+        //     lookMouse();
+        //     GameObject newBullet = Instantiate(bulletPrefab, spawnPoint.position, transform.rotation);
+        //     newBullet.GetComponent<Rigidbody>().AddForce(gun.forward * bulletForce);
+        // }
 
         // Movement
         if(Input.GetMouseButtonDown(1)) {
@@ -50,21 +50,21 @@ public class JoyPlayerCode : MonoBehaviour
             }
         }
 
-        if (PublicVars.enemyNum == PublicVars.enemyDestroyed && portal != null) { portal.SetActive(true); }
+        //if (PublicVars.enemyNum == PublicVars.enemyDestroyed && portal != null) { portal.SetActive(true); }
     }
 
-    public void FixedUpdate() {
-        lookMouse();
-    }
+    // public void FixedUpdate() {
+    //     lookMouse();
+    // }
 
-    void lookMouse(){
-        RaycastHit hit;
-            if(Physics.Raycast(mainCam.ScreenPointToRay(Input.mousePosition) ,out hit, 200 )){
-                Vector3 target = hit.point;
-                target.y = spawnPoint.position.y;
-                gun.LookAt(target);
-            }
-    }
+    // void lookMouse(){
+    //     RaycastHit hit;
+    //         if(Physics.Raycast(mainCam.ScreenPointToRay(Input.mousePosition) ,out hit, 200 )){
+    //             Vector3 target = hit.point;
+    //             target.y = spawnPoint.position.y;
+    //             gun.LookAt(target);
+    //         }
+    // }
 
     private void OnTriggerEnter(Collider other){
         if(other.CompareTag("Key")){

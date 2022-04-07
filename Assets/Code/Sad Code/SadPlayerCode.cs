@@ -19,7 +19,36 @@ public class SadPlayerCode : MonoBehaviour
     public Vector3 startPos;
     public GameObject clipboard;
     private GameObject portal;
+
     private GameObject necklace;
+    public GameObject necklacePrefab;
+    public Transform neckSpawn;
+
+    private GameObject dog;
+    public GameObject dogPrefab;
+    public Transform dogSpawn;
+
+    private GameObject ball;
+    public GameObject ballPrefab;
+    public Transform ballSpawn;
+
+    private GameObject bear;
+    public GameObject bearPrefab;
+    public Transform bearSpawn;
+
+    private GameObject key;
+    public GameObject keyPrefab;
+    public Transform keySpawn;
+
+    private GameObject door;
+    public GameObject doorPrefab;
+    public Transform doorSpawn;
+
+
+    AudioSource _audioSource;
+    public AudioClip collectObjectSound;
+    public AudioClip clipboardSound;
+
 
     void Start() {
         portal = GameObject.FindGameObjectWithTag("Portal");
@@ -32,11 +61,9 @@ public class SadPlayerCode : MonoBehaviour
         }
 
         _navAgent = GetComponent<NavMeshAgent>();
+        _audioSource = GetComponent<AudioSource>();
         mainCam = Camera.main;
         startPos = transform.position;
-
-        // PublicVars.enemyNum = GameObject.FindGameObjectsWithTag("Enemy").Length;
-        // Debug.Log("Number of enemies is equal to " + PublicVars.enemyNum);
     }
 
 
@@ -44,14 +71,83 @@ public class SadPlayerCode : MonoBehaviour
         if(Input.GetMouseButtonDown(0)) {
             RaycastHit hit;
             if(Physics.Raycast(mainCam.ScreenPointToRay(Input.mousePosition), out hit, 200)) {
-                if (hit.transform.name == "Clipboard"){
-                    SadPublicVars.clicked = true;
-                    Debug.Log("clip board clicked");
+
+                if (hit.transform.name == "Clipboard" && SadPublicVars.objectIndex == 0 && SadPublicVars.clicked == false){
+                    if(SadPublicVars.hasNecklace == false){
+                        SadPublicVars.clicked = true;
+                        Instantiate(necklacePrefab, neckSpawn.position, neckSpawn.rotation);
+                        _audioSource.PlayOneShot(clipboardSound);
+                        Debug.Log("clip board clicked"); 
+                    }
                 }
-                if (hit.transform.name == "necklace"){
+                if (hit.transform.name == "Clipboard" && SadPublicVars.objectIndex == 1 && SadPublicVars.clicked == false){
+                    if(SadPublicVars.hasNecklace == true && SadPublicVars.hasDog == false){
+                        SadPublicVars.clicked = true;
+                        Instantiate(dogPrefab, dogSpawn.position, dogSpawn.rotation);
+                        _audioSource.PlayOneShot(clipboardSound);
+                        Debug.Log("clip board clicked"); 
+                    }
+                }
+                if (hit.transform.name == "Clipboard" && SadPublicVars.objectIndex == 2 && SadPublicVars.clicked == false){
+                    if(SadPublicVars.hasNecklace == true && SadPublicVars.hasDog == true && SadPublicVars.hasBall == false){
+                        SadPublicVars.clicked = true;
+                        Instantiate(ballPrefab, ballSpawn.position, ballSpawn.rotation);
+                        _audioSource.PlayOneShot(clipboardSound);
+                        Debug.Log("clip board clicked"); 
+                    }
+                }
+                if (hit.transform.name == "Clipboard" && SadPublicVars.objectIndex == 3 && SadPublicVars.clicked == false){
+                    if(SadPublicVars.hasNecklace == true && SadPublicVars.hasDog == true && SadPublicVars.hasBall == true && SadPublicVars.hasBear == false){
+                        SadPublicVars.clicked = true;
+                        Instantiate(bearPrefab, bearSpawn.position, bearSpawn.rotation);
+                        _audioSource.PlayOneShot(clipboardSound);
+                        Debug.Log("clip board clicked"); 
+                    }
+                }
+                if (hit.transform.name == "Clipboard" && SadPublicVars.objectIndex == 4 && SadPublicVars.clicked == false){
+                    if(SadPublicVars.hasNecklace == true && SadPublicVars.hasDog == true && SadPublicVars.hasBall == true && 
+                       SadPublicVars.hasBear == true && SadPublicVars.hasKey == false){
+                        SadPublicVars.clicked = true;
+                        Instantiate(keyPrefab, keySpawn.position, keySpawn.rotation);
+                        _audioSource.PlayOneShot(clipboardSound);
+                        Debug.Log("clip board clicked"); 
+                    }
+                }
+                if (hit.transform.tag == "Necklace"){
+                    necklace = GameObject.FindGameObjectWithTag("Necklace");
+                    SadPublicVars.objectIndex = 1;
                     SadPublicVars.hasNecklace = true;
-                    SadPublicVars.itemCount++;
+                    updateVars();
                     Destroy(necklace);
+                }
+                if (hit.transform.tag == "Dog"){
+                    dog = GameObject.FindGameObjectWithTag("Dog");
+                    SadPublicVars.objectIndex = 2;
+                    SadPublicVars.hasDog = true;
+                    updateVars();
+                    Destroy(dog);
+                }
+                if (hit.transform.tag == "Soccer"){
+                    ball = GameObject.FindGameObjectWithTag("Soccer");
+                    SadPublicVars.objectIndex = 3;
+                    SadPublicVars.hasBall = true;
+                    updateVars();
+                    Destroy(ball);
+                }
+                if (hit.transform.tag == "Bear"){
+                    bear = GameObject.FindGameObjectWithTag("Bear");
+                    SadPublicVars.objectIndex = 4;
+                    SadPublicVars.hasBear = true;
+                    updateVars();
+                    Destroy(bear);
+                }
+                if (hit.transform.tag == "Key"){
+                    key = GameObject.FindGameObjectWithTag("Key");
+                    SadPublicVars.objectIndex = 5;
+                    SadPublicVars.hasKey = true;
+                    Instantiate(doorPrefab, doorSpawn.position, doorSpawn.rotation);
+                    updateVars();
+                    Destroy(key);
                 }
             }
             // lookMouse();
@@ -84,6 +180,11 @@ public class SadPlayerCode : MonoBehaviour
     //             gun.LookAt(target);
     //         }
     // }
+
+    void updateVars(){
+        SadPublicVars.clicked = false;
+        SadPublicVars.itemCount++;
+    }
 
     private void OnTriggerEnter(Collider other){
         if(other.CompareTag("Clipboard")){
