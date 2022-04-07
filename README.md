@@ -31,3 +31,11 @@ Joy Scene:
   * "FREE Casual Island Game Loops" - Aural Space: https://assetstore.unity.com/packages/audio/music/free-casual-island-game-loops-149975#description
   
   * "typewriterUI" - Nick Hwang : https://github.com/rioter00/UnityExamples/blob/master/typewriterUI.cs
+
+Cut Scenes:
+
+ * "The Invasion" Audio - Jake South : https://assetstore.unity.com/packages/audio/music/the-invasion-atmospheric-title-screen-sci-fi-95819#content
+ 
+ * "Fantasy Exploration Music" - Jared Alexander Johnson :  https://assetstore.unity.com/packages/audio/music/orchestral/fantasy-exploration-music-213668
+ 
+ * "Sunset Soundtrack" - Unity Technologies : https://assetstore.unity.com/packages/audio/music/sunset-soundtrack-microgames-add-ons-175375
