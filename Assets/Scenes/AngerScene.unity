@@ -9198,7 +9198,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bde3600f1ab891e45b686006d67daf4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelToLoad: SadHouse
+  levelToLoad: AnxietyStory1
 --- !u!1001 &299725145
 PrefabInstance:
   m_ObjectHideFlags: 0

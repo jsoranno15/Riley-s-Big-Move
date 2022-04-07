@@ -5,6 +5,14 @@ using UnityEngine.SceneManagement;
 
 public class StartMenu : MonoBehaviour
 {
+    public void RestartGame() {
+        SceneManager.LoadScene("StartMenu");
+    }
+
+    public void LevelSelect() {
+        SceneManager.LoadScene("LevelSelect");
+    }
+
     // Start Game Button
     public void StartGame() {
         SceneManager.LoadScene("IntroStory1");

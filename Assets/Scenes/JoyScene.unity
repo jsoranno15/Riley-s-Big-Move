@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657815, g: 0.49641192, b: 0.57481617, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -5773,6 +5773,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ItemScore: {fileID: 813969448}
   totalItemNumber: 5
+  levelToLoad: EndStory
   FoundText: {fileID: 1252790422}
   GameoverScreen: {fileID: 1014464070}
 --- !u!4 &328674535
@@ -6528,6 +6529,9 @@ MonoBehaviour:
   bulletPrefab: {fileID: 0}
   fire: {fileID: 0}
   bullet: {fileID: 0}
+  keyPickUp: {fileID: 0}
+  textUI: {fileID: 0}
+  death: {fileID: 0}
 --- !u!195 &431613318
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -13719,7 +13723,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 149, y: -9.100006}
+  m_AnchoredPosition: {x: 149, y: -9.099976}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &813969448
@@ -20346,7 +20350,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 75, y: -50}
+  m_AnchoredPosition: {x: 130, y: -36}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1252790422
@@ -20432,7 +20436,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: 0, z: -98.5041, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -31168,7 +31172,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 42.1, y: -9.1}
+  m_AnchoredPosition: {x: 42.099976, y: -9.099976}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &1687165612

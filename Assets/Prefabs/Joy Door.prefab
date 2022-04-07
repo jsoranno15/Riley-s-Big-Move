@@ -4940,4 +4940,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de9ed0de734a0924092fe8f08f1fa5bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelToLoad: AngerScene
+  levelToLoad: JoyStory1

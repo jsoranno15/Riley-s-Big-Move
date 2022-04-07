@@ -8,6 +8,7 @@ public class ItemHandler : MonoBehaviour
 {
     public TextMeshProUGUI ItemScore;
     public int totalItemNumber;
+    public string levelToLoad;
 
 
     public TextMeshProUGUI FoundText;
@@ -32,7 +33,7 @@ public class ItemHandler : MonoBehaviour
         StartCoroutine(ShowItemFoundText(obj));
         if(ItemList.Count==totalItemNumber)
         {
-            GameoverScreen.SetActive(true);
+            SceneManager.LoadScene(levelToLoad);
         }
 
     }

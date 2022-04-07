@@ -6,26 +6,53 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/StartMenu.unity
+    path: Assets/Scenes/CutScenes/StartMenu.unity
     guid: 9de6203c73dcbd84aa2ad31d6b6191e7
   - enabled: 1
-    path: Assets/Scenes/IntroStory1.unity
+    path: Assets/Scenes/CutScenes/IntroStory1.unity
     guid: e6cb36bce9bd246289b6386a5990629d
   - enabled: 1
-    path: Assets/Scenes/IntroStory2.unity
+    path: Assets/Scenes/CutScenes/IntroStory2.unity
     guid: d351bb616fd78451c93b3cf4095861ce
   - enabled: 1
-    path: Assets/Scenes/LevelSelect.unity
+    path: Assets/Scenes/CutScenes/LevelSelect.unity
     guid: 4e06383c1f0ed3447b5bf22003f549bd
   - enabled: 1
-    path: Assets/Scenes/Instructions.unity
+    path: Assets/Scenes/CutScenes/Instructions.unity
     guid: 10066f46eddc9f946bff8d749f8db8aa
+  - enabled: 1
+    path: Assets/Scenes/CutScenes/SadStory1.unity
+    guid: 798e12f64bf2243b4b78635438843593
+  - enabled: 1
+    path: Assets/Scenes/CutScenes/SadStory2.unity
+    guid: ad333e339111f41aeb5059073528cc6f
   - enabled: 1
     path: Assets/Scenes/AnxietyHouse.unity
     guid: 03289f4d82fa7884a8d32763244eed36
   - enabled: 1
     path: Assets/Scenes/AngerScene.unity
     guid: 98158cc47e2f6864a9860e71953503d1
+  - enabled: 1
+    path: Assets/Scenes/CutScenes/AngerStory1.unity
+    guid: 2c54928eaf2bc4ab2bdadc5b3767a0ed
+  - enabled: 1
+    path: Assets/Scenes/CutScenes/AngerStory2.unity
+    guid: 1835b3fd0d3aa4c3db52ae3477f6d8e6
+  - enabled: 1
+    path: Assets/Scenes/CutScenes/AnxietyStory1.unity
+    guid: a0ff115d4879b4ed0a62844fe223c5a7
+  - enabled: 1
+    path: Assets/Scenes/CutScenes/AnxietyStory2.unity
+    guid: fd58e0cf8ee3f4ebd8a1dfb9bf6309d3
+  - enabled: 1
+    path: Assets/Scenes/CutScenes/JoyStory1.unity
+    guid: 5aef2448df11d4cfb963b970a688bee3
+  - enabled: 1
+    path: Assets/Scenes/CutScenes/JoyStory2.unity
+    guid: 39f86189278674b2d9efe18645e9e17a
+  - enabled: 1
+    path: Assets/Scenes/CutScenes/EndStory.unity
+    guid: 66dbfaa00cb754bb39b151990e1c57d3
   - enabled: 1
     path: Assets/Scenes/SadHouse.unity
     guid: fe0a2f4fb6a38e84f87dde253fae1d42
