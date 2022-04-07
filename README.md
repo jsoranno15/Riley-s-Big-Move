@@ -13,3 +13,19 @@ Anger Scene:
   * "FREE Casual Game SFX Pack" - Dustyroom : https://assetstore.unity.com/packages/audio/sound-fx/free-casual-game-sfx-pack-54116
   
   * "Free Casual SoundFX Pack" - Tim Beek : https://assetstore.unity.com/packages/audio/sound-fx/free-casual-soundfx-pack-164843
+
+Joy Scene:
+
+  * "9t5 Low Poly Playground" - 9t5 : https://assetstore.unity.com/packages/3d/characters/9t5-low-poly-playground-102503#description
+  
+  * "Bicycle, Scooter, Skateboard" - Sirik : https://assetstore.unity.com/packages/3d/vehicles/land/bicycle-scooter-skateboard-170056#description
+  
+  * "Free Hot Dog Truck" - Bobby Art : https://assetstore.unity.com/packages/3d/vehicles/free-hot-dog-truck-73014
+  
+  * "Free Little Games Asset Pack" - Ferocious Industries : https://assetstore.unity.com/packages/3d/props/free-little-games-asset-pack-125089#description
+  
+  * "RPG Food & Drinks Pack" - Holotna : https://assetstore.unity.com/packages/3d/props/food/rpg-food-drinks-pack-121067#description
+  
+  * "Super Beach Pack" - Samer Khatib : https://assetstore.unity.com/packages/3d/props/exterior/super-beach-pack-39084#description
+  
+  * "typewriterUI" - Nick Hwang : https://github.com/rioter00/UnityExamples/blob/master/typewriterUI.cs
