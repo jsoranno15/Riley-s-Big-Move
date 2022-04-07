@@ -10710,6 +10710,8 @@ MonoBehaviour:
   keySpawn: {fileID: 598523495}
   doorPrefab: {fileID: 95747299215403022, guid: 40c19418d4886264bb2aab90bbf91b5e, type: 3}
   doorSpawn: {fileID: 719583136}
+  collectObjectSound: {fileID: 8300000, guid: 79180f511d89441b9aa23ccae1992fe0, type: 3}
+  clipboardSound: {fileID: 8300000, guid: 130a177e727814a2ea78a886ab72213d, type: 3}
 --- !u!65 &2754759759269709984
 BoxCollider:
   m_ObjectHideFlags: 0

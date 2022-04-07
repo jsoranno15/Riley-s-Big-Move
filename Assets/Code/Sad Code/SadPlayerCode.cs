@@ -44,6 +44,12 @@ public class SadPlayerCode : MonoBehaviour
     public GameObject doorPrefab;
     public Transform doorSpawn;
 
+
+    AudioSource _audioSource;
+    public AudioClip collectObjectSound;
+    public AudioClip clipboardSound;
+
+
     void Start() {
         portal = GameObject.FindGameObjectWithTag("Portal");
         clipboard = GameObject.FindGameObjectWithTag("Clipboard");
@@ -55,6 +61,7 @@ public class SadPlayerCode : MonoBehaviour
         }
 
         _navAgent = GetComponent<NavMeshAgent>();
+        _audioSource = GetComponent<AudioSource>();
         mainCam = Camera.main;
         startPos = transform.position;
     }
@@ -69,6 +76,7 @@ public class SadPlayerCode : MonoBehaviour
                     if(SadPublicVars.hasNecklace == false){
                         SadPublicVars.clicked = true;
                         Instantiate(necklacePrefab, neckSpawn.position, neckSpawn.rotation);
+                        _audioSource.PlayOneShot(clipboardSound);
                         Debug.Log("clip board clicked"); 
                     }
                 }
@@ -76,6 +84,7 @@ public class SadPlayerCode : MonoBehaviour
                     if(SadPublicVars.hasNecklace == true && SadPublicVars.hasDog == false){
                         SadPublicVars.clicked = true;
                         Instantiate(dogPrefab, dogSpawn.position, dogSpawn.rotation);
+                        _audioSource.PlayOneShot(clipboardSound);
                         Debug.Log("clip board clicked"); 
                     }
                 }
@@ -83,6 +92,7 @@ public class SadPlayerCode : MonoBehaviour
                     if(SadPublicVars.hasNecklace == true && SadPublicVars.hasDog == true && SadPublicVars.hasBall == false){
                         SadPublicVars.clicked = true;
                         Instantiate(ballPrefab, ballSpawn.position, ballSpawn.rotation);
+                        _audioSource.PlayOneShot(clipboardSound);
                         Debug.Log("clip board clicked"); 
                     }
                 }
@@ -90,6 +100,7 @@ public class SadPlayerCode : MonoBehaviour
                     if(SadPublicVars.hasNecklace == true && SadPublicVars.hasDog == true && SadPublicVars.hasBall == true && SadPublicVars.hasBear == false){
                         SadPublicVars.clicked = true;
                         Instantiate(bearPrefab, bearSpawn.position, bearSpawn.rotation);
+                        _audioSource.PlayOneShot(clipboardSound);
                         Debug.Log("clip board clicked"); 
                     }
                 }
@@ -98,6 +109,7 @@ public class SadPlayerCode : MonoBehaviour
                        SadPublicVars.hasBear == true && SadPublicVars.hasKey == false){
                         SadPublicVars.clicked = true;
                         Instantiate(keyPrefab, keySpawn.position, keySpawn.rotation);
+                        _audioSource.PlayOneShot(clipboardSound);
                         Debug.Log("clip board clicked"); 
                     }
                 }
