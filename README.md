@@ -7,3 +7,5 @@ Anger Scene:
   * "SimplePoly - Town Pack" - Gnome's Artworks : https://assetstore.unity.com/packages/3d/environments/simplepoly-town-pack-62400
   
   * "Weapon Soldier Sounds Pack" - Mental Dreams : https://assetstore.unity.com/packages/audio/sound-fx/weapons/weapon-soldier-sounds-pack-29662
+  
+  * "Mood Setters - On a Darker Note #1 FREE" - Mike Burns Music : https://assetstore.unity.com/packages/audio/music/mood-setters-on-a-darker-note-1-free-115456
