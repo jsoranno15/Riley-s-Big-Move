@@ -28,4 +28,6 @@ Joy Scene:
   
   * "Super Beach Pack" - Samer Khatib : https://assetstore.unity.com/packages/3d/props/exterior/super-beach-pack-39084#description
   
+  * "FREE Casual Island Game Loops" - Aural Space: https://assetstore.unity.com/packages/audio/music/free-casual-island-game-loops-149975#description
+  
   * "typewriterUI" - Nick Hwang : https://github.com/rioter00/UnityExamples/blob/master/typewriterUI.cs
