@@ -10,5 +10,7 @@ public static class PublicVars
     public static bool isSpotted = false;
     public static int enemyNum = 9;
     public static int enemyDestroyed = 0;
+
+    
     
 }
