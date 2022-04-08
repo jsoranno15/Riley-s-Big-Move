@@ -173,7 +173,6 @@ GameObject:
   - component: {fileID: 2754759758741352643}
   - component: {fileID: 2754759758741352640}
   - component: {fileID: 2754759758741352644}
-  - component: {fileID: 2754759758741352647}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -284,21 +283,6 @@ NavMeshAgent:
   m_BaseOffset: 1
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!114 &2754759758741352647
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2754759758741352641}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2768e0248af855f4290c0c29176c36ec, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spawnPoint: {fileID: 2754759757969435359}
-  gun: {fileID: 2754759758156540837}
-  bulletPrefab: {fileID: 7086146927600120657, guid: 3300f0959a345bc40b9e06f87769d76d, type: 3}
 --- !u!1 &2754759758859550398
 GameObject:
   m_ObjectHideFlags: 0

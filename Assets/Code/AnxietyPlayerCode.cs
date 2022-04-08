@@ -17,6 +17,7 @@ public class AnxietyPlayerCode : MonoBehaviour
     public Vector3 startPos;
 
     private GameObject portal;
+    private AudioSource gunAudio;
 
     void Start() {
         portal = GameObject.FindGameObjectWithTag("Portal");
@@ -29,6 +30,7 @@ public class AnxietyPlayerCode : MonoBehaviour
         _navAgent = GetComponent<NavMeshAgent>();
         mainCam = Camera.main;
         startPos = transform.position;
+        gunAudio = GetComponent<AudioSource>();
 
         PublicVars.enemyNum = GameObject.FindGameObjectsWithTag("Enemy").Length;
         Debug.Log("Number of enemies is equal to " + PublicVars.enemyNum);
@@ -41,6 +43,7 @@ public class AnxietyPlayerCode : MonoBehaviour
             lookMouse();
             GameObject newBullet = Instantiate(bulletPrefab, spawnPoint.position, transform.rotation);
             newBullet.GetComponent<Rigidbody>().AddForce(gun.forward * bulletForce);
+            gunAudio.Play();
         }
 
         // Movement
@@ -51,7 +54,13 @@ public class AnxietyPlayerCode : MonoBehaviour
             }
         }
 
-        if (PublicVars.enemyNum == PublicVars.enemyDestroyed && portal != null) { portal.SetActive(true); }
+        if (PublicVars.enemyNum == PublicVars.enemyDestroyed && portal != null && !PublicVars.turnedOn) 
+        { 
+            portal.SetActive(true);
+            PublicVars.turnedOn = true;
+            mainCam.GetComponent<AudioSource>().Stop();
+            portal.GetComponent<AudioSource>().Play();
+        }
     }
 
     public void FixedUpdate() {

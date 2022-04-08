@@ -11,6 +11,8 @@ public static class PublicVars
     public static int enemyNum = 9;
     public static int enemyDestroyed = 0;
 
+    public static bool turnedOn = false;
+
     
     
 }
