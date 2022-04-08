@@ -15,6 +15,8 @@ Anger Scene:
   * "Free Casual SoundFX Pack" - Tim Beek : https://assetstore.unity.com/packages/audio/sound-fx/free-casual-soundfx-pack-164843
 
 Anxiety Scene:
+  * "Drone Guard" - Lukas Bobor - https://assetstore.unity.com/packages/3d/characters/robots/drone-guard-175607#publisher
+  * "Classic Interior Door Pack 1" -Jan Fidler - https://assetstore.unity.com/packages/3d/props/interior/classic-interior-door-pack-1-118744#publisher
 
 Sadness Scene:
 
