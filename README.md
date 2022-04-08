@@ -13,8 +13,6 @@ Anger Scene:
   * "FREE Casual Game SFX Pack" - Dustyroom : https://assetstore.unity.com/packages/audio/sound-fx/free-casual-game-sfx-pack-54116
   
   * "Free Casual SoundFX Pack" - Tim Beek : https://assetstore.unity.com/packages/audio/sound-fx/free-casual-soundfx-pack-164843
-  
-  * "Meshtint Free Boximon Fiery Mega Toon Series" - Meshtint Studio : https://assetstore.unity.com/packages/3d/characters/meshtint-free-boximon-fiery-mega-toon-series-153958
 
 Anxiety Scene:
 
@@ -37,10 +35,6 @@ Sadness Scene:
   * "Clipboard" - cookiepopworks.com : https://assetstore.unity.com/packages/3d/props/clipboard-137662#description
   
   * "Apartment Kit" - Brick Project Studio : https://assetstore.unity.com/packages/3d/props/apartment-kit-124055#description
-
-
-
-
 
 Joy Scene:
 
