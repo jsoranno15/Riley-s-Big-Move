@@ -14,10 +14,14 @@ public class ItemHandler : MonoBehaviour
     public TextMeshProUGUI FoundText;
     private List<GameObject> ItemList = new List<GameObject>();
     public GameObject GameoverScreen;
+
+    public AudioSource _audioSource;
+    public AudioClip collectObjectSound;
    
     void Start()
     {
         ItemScore.text = ItemList.Count + "/" + totalItemNumber;
+        _audioSource = GetComponent<AudioSource>();
     }
 
   
@@ -31,6 +35,7 @@ public class ItemHandler : MonoBehaviour
         obj.SetActive(false);
         ItemScore.text = ItemList.Count + "/" + totalItemNumber;
         StartCoroutine(ShowItemFoundText(obj));
+        _audioSource.PlayOneShot(collectObjectSound);
         if(ItemList.Count==totalItemNumber)
         {
             SceneManager.LoadScene(levelToLoad);
@@ -44,6 +49,7 @@ public class ItemHandler : MonoBehaviour
         yield return new WaitForSeconds(5f);
         FoundText.gameObject.SetActive(false);
     }
+
     public void ExitApp()
     {
         Application.Quit();
