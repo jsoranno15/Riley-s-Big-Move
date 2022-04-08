@@ -38,6 +38,14 @@ Anxiety Scene:
   * "Store Shelves" - https://sketchfab.com/3d-models/store-shelves-8406794ee19b4af49e0ccc02d1132915 
   
   * "Convenience Store Shelves" - https://sketchfab.com/3d-models/convenience-store-shelves-15db5f6f195c4995898af1b0ce431f80 
+        
+        * Sounds
+               *  Rumbling Drone - https://freesound.org/people/Nielsvdb/sounds/547644/
+               *  Nuclear Alarm - https://freesound.org/people/radio_illuminati/sounds/206141/
+               *  Build Up Tune - https://freesound.org/people/TheDweebMan/sounds/333781/
+               *  PC Bitcrushed Lazer Beam - https://freesound.org/people/medetix/sounds/177906/
+               *  Security Scanning - https://freesound.org/people/MATRIXXX_/sounds/523764/
+               *  Robot-death - https://freesound.org/people/psychedelic_hands/sounds/144469/ 
 
 Sadness Scene:
 
