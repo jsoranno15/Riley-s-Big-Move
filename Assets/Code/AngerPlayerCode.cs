@@ -113,6 +113,8 @@ public class AngerPlayerCode : MonoBehaviour
             textUI.text += c;
             yield return new WaitForSeconds(0.06f);
         }
+        AngerPublicVars.gateUnlock = false;
+        AngerPublicVars.hasKey = false;
         yield return new WaitForSeconds(2.0f);
         SceneManager.LoadScene("AngerScene");
     }
