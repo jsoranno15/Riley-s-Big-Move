@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.43667555, g: 0.48427176, b: 0.56452405, a: 1}
+  m_IndirectSpecularColor: {r: 0.4366756, g: 0.48427194, b: 0.5645252, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &4
 LightmapSettings:
@@ -68511,6 +68511,7 @@ MonoBehaviour:
   spawnPoint: {fileID: 972740995}
   gun: {fileID: 972740994}
   bulletPrefab: {fileID: 7086146927600120657, guid: 3300f0959a345bc40b9e06f87769d76d, type: 3}
+  display: {fileID: 515385884}
   startPos: {x: 0, y: 0, z: 0}
 --- !u!82 &1795089266
 AudioSource:

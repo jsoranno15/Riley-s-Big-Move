@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using TMPro;
 
 public class AnxietyPlayerCode : MonoBehaviour
 {
@@ -13,6 +14,7 @@ public class AnxietyPlayerCode : MonoBehaviour
     public Transform spawnPoint;
     public Transform gun;
     public GameObject bulletPrefab;
+    public TextMeshProUGUI display;
 
     public Vector3 startPos;
 
@@ -57,6 +59,7 @@ public class AnxietyPlayerCode : MonoBehaviour
         if (PublicVars.enemyNum == PublicVars.enemyDestroyed && portal != null && !PublicVars.turnedOn) 
         { 
             portal.SetActive(true);
+            display.text = "Drones Killed";
             PublicVars.turnedOn = true;
             mainCam.GetComponent<AudioSource>().Stop();
             portal.GetComponent<AudioSource>().Play();
