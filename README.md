@@ -19,6 +19,26 @@ Anxiety Scene:
  
   * "Classic Interior Door Pack 1" -Jan Fidler - https://assetstore.unity.com/packages/3d/props/interior/classic-interior-door-pack-1-118744#publisher
 
+  * "Modular Props - Group 1, Booth and Table" - https://sketchfab.com/3d-models/modular-props-group-1-booth-and-table-baea9650e8ed4bb5953b499a352ddf43
+  
+  * "VOXEL Furniture FREE" - https://assetstore.unity.com/packages/3d/props/furniture/voxel-furniture-free-170365
+  
+  * "Restaurant Interior Full Pack" - https://assetstore.unity.com/packages/3d/props/interior/restaurant-interior-full-pack-153273
+
+  * "Arcade Machines - PolyPack" - https://assetstore.unity.com/packages/3d/props/arcade-machines-polypack-207908
+  
+  * "Low Poly Guitars Pack" - https://assetstore.unity.com/packages/3d/props/low-poly-guitars-pack-161857 
+
+  * "Low Poly Office Props - LITE" - https://assetstore.unity.com/packages/3d/environments/low-poly-office-props-lite-131438
+  
+  * "Escalator" - https://sketchfab.com/3d-models/escalator-da1997bf0ab64fb4aa3e3130fdc1d325
+  
+  * "CoffeeShop Starter Pack" - https://assetstore.unity.com/packages/3d/props/coffeeshop-starter-pack-160914#description 
+  
+  * "Store Shelves" - https://sketchfab.com/3d-models/store-shelves-8406794ee19b4af49e0ccc02d1132915 
+  
+  * "Convenience Store Shelves" - https://sketchfab.com/3d-models/convenience-store-shelves-15db5f6f195c4995898af1b0ce431f80 
+
 Sadness Scene:
 
   * "FREE Casual Game SFX Pack" - https://assetstore.unity.com/packages/audio/sound-fx/free-casual-game-sfx-pack-54116#description
