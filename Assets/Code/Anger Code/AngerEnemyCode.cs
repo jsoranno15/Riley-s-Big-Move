@@ -30,6 +30,7 @@ public class AngerEnemyCode : MonoBehaviour
     private void OnCollisionEnter(Collision other){
         // Enemy Death
         if(other.gameObject.CompareTag("Bullet")){
+            _audioSource.PlayOneShot(death);
             StartCoroutine(deathSound());
             Destroy(other.gameObject);
             AngerEnemySpawn.enemyCount--;

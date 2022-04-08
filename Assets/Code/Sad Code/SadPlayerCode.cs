@@ -117,6 +117,7 @@ public class SadPlayerCode : MonoBehaviour
                     necklace = GameObject.FindGameObjectWithTag("Necklace");
                     SadPublicVars.objectIndex = 1;
                     SadPublicVars.hasNecklace = true;
+                    _audioSource.PlayOneShot(collectObjectSound);
                     updateVars();
                     Destroy(necklace);
                 }
@@ -124,6 +125,7 @@ public class SadPlayerCode : MonoBehaviour
                     dog = GameObject.FindGameObjectWithTag("Dog");
                     SadPublicVars.objectIndex = 2;
                     SadPublicVars.hasDog = true;
+                    _audioSource.PlayOneShot(collectObjectSound);
                     updateVars();
                     Destroy(dog);
                 }
@@ -131,6 +133,7 @@ public class SadPlayerCode : MonoBehaviour
                     ball = GameObject.FindGameObjectWithTag("Soccer");
                     SadPublicVars.objectIndex = 3;
                     SadPublicVars.hasBall = true;
+                    _audioSource.PlayOneShot(collectObjectSound);
                     updateVars();
                     Destroy(ball);
                 }
@@ -138,6 +141,7 @@ public class SadPlayerCode : MonoBehaviour
                     bear = GameObject.FindGameObjectWithTag("Bear");
                     SadPublicVars.objectIndex = 4;
                     SadPublicVars.hasBear = true;
+                    _audioSource.PlayOneShot(collectObjectSound);
                     updateVars();
                     Destroy(bear);
                 }
@@ -145,6 +149,7 @@ public class SadPlayerCode : MonoBehaviour
                     key = GameObject.FindGameObjectWithTag("Key");
                     SadPublicVars.objectIndex = 5;
                     SadPublicVars.hasKey = true;
+                    _audioSource.PlayOneShot(collectObjectSound);
                     Instantiate(doorPrefab, doorSpawn.position, doorSpawn.rotation);
                     updateVars();
                     Destroy(key);
